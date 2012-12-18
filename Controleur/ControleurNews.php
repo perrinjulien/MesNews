@@ -1,7 +1,7 @@
 <?php
 
 require_once 'Modele/ModeleNews.php';
-require_once 'Modele/modele_news/ajout.php';
+require_once 'Modele/modele_news_ajout.php';
 
 require_once 'Controleur/Controleur.php';
 
