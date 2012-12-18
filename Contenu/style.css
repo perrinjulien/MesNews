@@ -1,0 +1,79 @@
+/*	Pour pouvoir utiliser une hauteur (height) ou une hauteur minimale
+	(min-height) sur un bloc, il faut que son parent direct ait lui-même une
+	hauteur déterminée (donc toute valeur de height sauf "auto": hauteur en
+	pixels, em, autres unités...).
+	Si la hauteur du parent est en pourcentage, elle se réfère alors à la
+	hauteur du «grand-père», et ainsi de suite.
+	Ainsi, pour pouvoir utiliser un "min-height: 100%" sur div#global, il nous
+	faut:
+	- un parent (body) en "height: 100%";
+	- le parent de body également en "height: 100%". */
+html, body {
+	height: 100%;
+}
+
+body {
+    background: rgb(170,170,170);
+    font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
+}
+
+a:hover, a:focus {
+    color: crimson;
+}
+
+nav, article {
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 4px 4px 0px grey;
+}
+
+nav {
+    float: left;
+    margin-right: 20px;
+}
+
+article {
+    margin-bottom: 15px;
+}
+
+#global {
+    min-height: 100%;  /* Voir commentaire sur html et body en haut de la feuille de style */
+    background: rgb(227,227,227);
+    width: 70%;
+    margin: auto;	/* Permet de centrer la div */
+    text-align: justify;
+    padding: 5px 20px;
+    box-shadow: 6px 6px 0px grey;
+}
+
+#contenu {
+    margin-bottom : 30px;
+    overflow: hidden;   /* Evite au bloc central de glisser sous le menu latéral 
+						   (alternative à la définition de marges pour ces blocs) */
+}
+
+#titreSite, #piedSite {
+    text-align: center;
+}
+
+.centre {
+    text-align: center;
+}
+
+.titreNews {
+    margin-bottom : 0px;
+}
+
+.titreNews a, #titreSite a {
+    color: black;
+    text-decoration: none;  /* Désactive le soulignement des liens vers les billets */
+}
+
+.categorie {
+    text-align: right;
+}
+
+.txt {
+    width: 100%;
+}
